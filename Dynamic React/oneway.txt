@@ -1,0 +1,32 @@
+import { useState } from "react";
+import "./App.css";
+
+function App() {
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+
+  function onchangeFunc(e) {
+    setemail(e.target.value);
+  }
+
+  function onchangefunc2(e) {
+    setpassword(e.target.value);
+  }
+
+  function onsubmit(e) {
+    e.preventDefault();
+    console.log(email, password);
+  }
+
+  return (
+    <>
+      <form onSubmit={onsubmit}>
+        <input type="text" value={email} onChange={onchangeFunc} />
+        <input type="text" value={password} onChange={onchangefunc2} />
+        <input type="submit" />
+      </form>
+    </>
+  );
+}
+
+export default App;

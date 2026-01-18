@@ -1,0 +1,30 @@
+import { useEffect, useRef } from "react";
+import "./App.css";
+
+function App() {
+  const email = useRef();
+  const password = useRef();
+
+  const form = useRef();
+
+  function onsubmit(e) {
+    e.preventDefault();
+    console.log(email.current.value, password.current.value);
+  }
+
+  useEffect(() => {
+    form.current.style.backgroundColor = "red";
+  }, []);
+
+  return (
+    <>
+      <form ref={form} onSubmit={onsubmit} style={{padding: "10px"}}>
+        <input ref={email} type="text" />
+        <input ref={password} type="text" />
+        <input type="submit" />
+      </form>
+    </>
+  );
+}
+
+export default App;

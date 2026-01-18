@@ -1,0 +1,35 @@
+// const [data, setData] = useState(0);
+
+  // const [data2, setData2] = useState(0);
+
+  // // This useEffect runs only once after the initial render and then runs whenever data changes
+  // useEffect(() => {
+  //   console.log("runs after every render");
+  // }, [data]);
+
+  // // This useEffect runs after every render
+  // useEffect(() => {
+  //   console.log("runs on each render");
+  // });
+
+  // // This useEffect runs only once after the initial render
+  // useEffect(() => {
+  //   console.log("runs only once after initial render");
+  // }, []);
+
+  // useEffect(() => {
+  //   const a = setInterval(() => {
+  //     console.log("runs after 2 seconds of delay");
+  //   }, 2000);
+
+  //   return () => {
+  //     clearInterval(a);
+  //     console.log("cleanup function called");
+  //   };
+  // },);
+
+
+  {/* <div>data2 {data2}</div>
+      <div>data {data}</div>
+      <button onClick={() => setData((prev) => prev + 1)}>increment</button>
+      <button onClick={() => setData2((prev) => prev + 1)}>increment</button> */}
