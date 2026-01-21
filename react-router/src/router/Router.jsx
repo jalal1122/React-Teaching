@@ -1,6 +1,8 @@
 import { Link, Route, Routes } from "react-router";
 import Home from "../Pages/Home";
 import About from "../Pages/About";
+import ProductDetail from "../Pages/ProductDetail";
+import Signin from "../Pages/Signin";
 
 const Router = () => {
   return (
@@ -15,6 +17,8 @@ const Router = () => {
           </h1>
         }
       />
+      <Route path="/products/:productId" element={<ProductDetail />} />
+      <Route path="/signin" element={<Signin />} />
     </Routes>
   );
 };
